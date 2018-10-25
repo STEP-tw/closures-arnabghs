@@ -76,9 +76,12 @@ const curry = function(functionName,outerInput){
   return funcForAll;
 }
 
-
-
-const compose = undefined;
+const compose = function(func1,func2){
+  const funcToReturn = function(input1,input2){
+    return func1(func2(input1,input2));
+  }
+  return funcToReturn;
+}
 
 exports.makeConstant=makeConstant;
 exports.makeCounterFromZero=makeCounterFromZero;
