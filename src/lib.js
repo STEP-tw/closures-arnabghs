@@ -42,14 +42,39 @@ const makeDeltaTracker = function(input){
 }
 
 
-
-
-
-
-
-
 const makeFiboGenerator = undefined;
-const makeCycler = undefined;
+
+
+
+const makeCycler = function(inputArray){
+  let firstArray = [];
+  for (let index in inputArray){
+    firstArray[index] = inputArray[index];
+  }
+  if (inputArray.length == 1){
+    const cycleOne = function(){
+      return inputArray[0];
+    }
+    return cycleOne;
+  }
+  let index = -1;
+  const cycleColours = function(){
+    if (index < firstArray.length-1){
+      index += 1;
+    } else {
+      index = 0;
+    }
+    return firstArray[index];
+  }
+  return cycleColours;
+}
+
+
+
+
+
+
+
 const curry = undefined;
 const compose = undefined;
 
