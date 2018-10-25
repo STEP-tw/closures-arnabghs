@@ -69,13 +69,15 @@ const makeCycler = function(inputArray){
   return cycleColours;
 }
 
+const curry = function(functionName,outerInput){
+  const funcForAll = function (firstArg,secondArg){
+    return functionName(outerInput,firstArg,secondArg);
+  }
+  return funcForAll;
+}
 
 
 
-
-
-
-const curry = undefined;
 const compose = undefined;
 
 exports.makeConstant=makeConstant;
