@@ -24,9 +24,30 @@ const makeCounterFromZero = function(){
 }
 
 
+const makeDeltaTracker = function(input){
+  let number = input - 2;
+  if (input == 2){
+    const trackDelta = function(){
+      output = {old: input, delta: number, new: input+number}
+      return output;
+    }
+    return trackDelta;
+  }
+  const trackDelta = function(number){
+    output = {old: input, delta: number, new: input+number}
+    input = output.new;
+    return output;
+  }
+  return trackDelta;
+}
 
 
-const makeDeltaTracker = undefined;
+
+
+
+
+
+
 const makeFiboGenerator = undefined;
 const makeCycler = undefined;
 const curry = undefined;
