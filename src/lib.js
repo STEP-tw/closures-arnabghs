@@ -5,26 +5,15 @@ const makeConstant = function(input){
    return outputfunction;
 }
 
-
-
-
- const makeCounterFromN = undefined;
-  //function(input){
-//   let numberOfmangos = 1;
-//   const countApples = function(){
-//     return 2;
-//   }
-//   const countMangos = function(){
-//     return numberOfmangos;
-//     numberOfmangos++;
-//   }
-//   const countOranges = function(){
-//     return numberOfOranges;
-//     numberOfOranges
-//
-//
-//
-
+const makeCounterFromN = function(input){
+  let number = input -1;
+  let countFruits = function(){
+    number++;
+    return number;
+  }
+  return countFruits;
+ }
+ 
 
 
 
