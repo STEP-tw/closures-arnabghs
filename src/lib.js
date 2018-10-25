@@ -1,5 +1,5 @@
 const makeConstant = function(input){
- let outputfunction = function (){
+ const outputfunction = function (){
    return input;
  }
    return outputfunction;
@@ -7,21 +7,25 @@ const makeConstant = function(input){
 
 const makeCounterFromN = function(input){
   let number = input -1;
-  let countFruits = function(){
+  const countFruits = function(){
     number++;
     return number;
   }
   return countFruits;
  }
- 
+
+const makeCounterFromZero = function(){
+  let number = -1;
+  const countAnimals = function(){
+    number++;
+    return number;
+  }
+  return countAnimals;
+}
 
 
 
 
-
-
-
-const makeCounterFromZero = undefined;
 const makeDeltaTracker = undefined;
 const makeFiboGenerator = undefined;
 const makeCycler = undefined;
