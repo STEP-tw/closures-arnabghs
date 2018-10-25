@@ -1,39 +1,37 @@
 const makeConstant = function(input){
-  const constantlyReturnTwo = function(input){
-    return 2;
-  }
-  const constantlyReturnString = function(input){
-    return 'hello';
-  }
-  const constantlyReturnArray = function(input){
-    return [1,2,3];
-  }
-  const constantlyReturnObject = function(input){
-    return {a: 1, b: 2};
-  }
-  if ( input == 2){
-    return constantlyReturnTwo;
-  }
-  else if ( input.toString() == 'hello'){
-    return constantlyReturnString;
-  }
-  else if (input.toString() == '1,2,3'){
-    return constantlyReturnArray;
-  }
-  else {
-    return constantlyReturnObject;
-  }
+ let outputfunction = function (){
+   return input;
+ }
+   return outputfunction;
 }
 
 
 
 
+ const makeCounterFromN = undefined;
+  //function(input){
+//   let numberOfmangos = 1;
+//   const countApples = function(){
+//     return 2;
+//   }
+//   const countMangos = function(){
+//     return numberOfmangos;
+//     numberOfmangos++;
+//   }
+//   const countOranges = function(){
+//     return numberOfOranges;
+//     numberOfOranges
+//
+//
+//
 
 
 
 
 
-const makeCounterFromN = undefined;
+
+
+
 const makeCounterFromZero = undefined;
 const makeDeltaTracker = undefined;
 const makeFiboGenerator = undefined;
