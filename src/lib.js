@@ -25,15 +25,10 @@ const makeCounterFromZero = function(){
 
 
 const makeDeltaTracker = function(input){
-  let number = input - 2;
-  if (input == 2){
-    const trackDelta = function(){
-      output = {old: input, delta: number, new: input+number}
-      return output;
+   const trackDelta = function(number){
+    if (number == undefined){
+      number = 0;
     }
-    return trackDelta;
-  }
-  const trackDelta = function(number){
     output = {old: input, delta: number, new: input+number}
     input = output.new;
     return output;
