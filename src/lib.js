@@ -42,7 +42,26 @@ const makeDeltaTracker = function(input){
 }
 
 
-const makeFiboGenerator = undefined;
+const makeFiboGenerator = function(arg1,arg2){
+  let prevNumber = -1;
+  let nextNum = arg2 - arg1;
+  if ( arg2 == undefined){
+    prevNumber = -1;
+    nextNum = 1;
+  }
+  const getNextFiboNum = function(){
+    let currentNum = prevNumber + nextNum;
+    prevNumber = nextNum;
+    nextNum = currentNum;
+    if (arg1 == undefined && arg2 == undefined){
+      return currentNum;
+    } else if (arg2 == undefined){
+      return currentNum*arg1;
+    }
+    return currentNum;
+  }
+  return getNextFiboNum;
+}
 
 
 
