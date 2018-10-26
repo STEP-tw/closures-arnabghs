@@ -58,29 +58,13 @@ const makeFiboGenerator = function(arg1,arg2){
   return getNextFiboNum;
 }
 
-
-
 const makeCycler = function(inputArray){
-  let firstArray = [];
-  for (let index in inputArray){
-    firstArray[index] = inputArray[index];
+  let firstArray = inputArray.map(function(element){return element});
+  let index = 0;
+  let length = firstArray.length ;
+  return function(){
+    return firstArray[index++%length];
   }
-  if (inputArray.length == 1){
-    const cycleOne = function(){
-      return inputArray[0];
-    }
-    return cycleOne;
-  }
-  let index = -1;
-  const cycleColours = function(){
-    if (index < firstArray.length-1){
-      index += 1;
-    } else {
-      index = 0;
-    }
-    return firstArray[index];
-  }
-  return cycleColours;
 }
 
 const curry = function(functionName,outerInput){
